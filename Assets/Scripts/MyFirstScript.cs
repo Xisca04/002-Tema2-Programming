@@ -8,9 +8,22 @@ public class MyFirstScript : MonoBehaviour
      4 variables with the player information 
      */
 
-    public int playerAge = 33; // This variable saves the player's age
+    public int playerAge = 33; 
     public float playerSpeed = 3.125f; // This variable saves the player's speed
-    public string playerName = "Xisca"; // This variable saves the player's name
+    public string playerName = "Xisca"; 
     public bool isGameOver = false; // This variable saves if the player has lost
 
+    public string message = "Hola mundo";
+    public int points = 256;
+
+    private void Start()
+    {
+        Debug.Log(message);
+        Debug.Log(points);
+        Debug.Log($"Tengo {points} puntos");
+        Debug.Log(string.Format("Tengo {0} puntos", points));
+        Debug.Log(string.Format("Hola {0}, tienes {1} puntos", playerName, points));
+        Debug.Log("Tengo " + points + " puntos");
+
+    }
 }
