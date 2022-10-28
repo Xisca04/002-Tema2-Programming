@@ -20,6 +20,12 @@ public class MyFirstScript : MonoBehaviour
     public float y = 3;
     private float result;
 
+    public bool isRaining;
+    public float number;
+    
+
+    public Vector3 initialPos = new Vector3 (1, 1, 1);
+
     private void Start()
     {
         Debug.Log(message);
@@ -31,5 +37,21 @@ public class MyFirstScript : MonoBehaviour
 
         result = x + y;
         Debug.Log(result);
+
+        if (isRaining == true)
+        {
+            Debug.Log($"Recuerda coger paraguas");
+        }
+
+        if (number > 0)
+        { 
+            Debug.Log($"El número {number} es positivo");
+        }
+        else
+        {
+            Debug.Log($"El número {number} es negativo o cero");
+        }
+
+        transform.position = initialPos;
     }
 }
