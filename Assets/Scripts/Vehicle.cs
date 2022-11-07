@@ -14,6 +14,22 @@ public class Vehicle : MonoBehaviour
 
     [SerializeField] private float gasoline;
 
+    public bool canGetBigger; //vectors
+    public Vector3 aumentar = new Vector3(1, 1, 1);
+
+    
+    private void Update() //vectors
+    {
+        if (canGetBigger == true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                transform.localScale += aumentar;
+            }
+        }
+        
+    }
+
     private void Start()
     {
         Debug.Log($"{name} tiene {playerWheels} ruedas");

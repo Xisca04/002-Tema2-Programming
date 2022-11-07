@@ -24,7 +24,7 @@ public class MyFirstScript : MonoBehaviour
     public float number;
     
 
-    public Vector3 initialPos = new Vector3 (1, 1, 1);
+    public Vector3 initialPos = new Vector3 (1, 1, 1); //vectors
 
     private void Start()
     {
@@ -52,6 +52,6 @@ public class MyFirstScript : MonoBehaviour
             Debug.Log($"El número {number} es negativo o cero");
         }
 
-        transform.position = initialPos;
+        transform.position = initialPos; //vectors
     }
 }
